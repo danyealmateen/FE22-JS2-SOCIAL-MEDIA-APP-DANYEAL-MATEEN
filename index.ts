@@ -30,6 +30,5 @@ postMessageBtn.addEventListener('click', (e) => {
 deleteAccBtn.addEventListener('click', (e) => {
     e.preventDefault()
     deleteUserAccount()
-    window.location.reload()
 })
 

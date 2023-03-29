@@ -27,6 +27,7 @@ async function deleteUserAccount() {
     };
     const response = await fetch(url, init);
     const userAccounts = await response.json();
+    window.location.reload()
 }
 
 export { deleteUserAccount }

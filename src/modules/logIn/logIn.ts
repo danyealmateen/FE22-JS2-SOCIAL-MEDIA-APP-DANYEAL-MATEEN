@@ -5,9 +5,7 @@ import { getStatusUpdate } from "../getStatusUpdate/getStatusUpdate";
 
 async function logIn() {
 
-    deleteAccBtn.style.display = "block";
-    displayUsernames.style.display = "block";
-    statusUpdatesContainer.style.display = "block"
+
 
     const url = `https://socialapp-8a221-default-rtdb.europe-west1.firebasedatabase.app/.json`;
     const response = await fetch(url);
@@ -19,11 +17,15 @@ async function logIn() {
         createUserDiv.style.display = "none";
         loggedInAs.innerHTML = `You are logged in as: ${inputUsername.value}`
         postMessageContainer.style.display = "block";
+        deleteAccBtn.style.display = "block";
+        displayUsernames.style.display = "block";
+        statusUpdatesContainer.style.display = "block"
         getStatusUpdate();
         displayUsers()
         displayAllStatusUpdates()
     } else {
         messagesForUser.innerText = `Wrong username, wrong password or account does not exist.`
+        return;
     }
 }
 

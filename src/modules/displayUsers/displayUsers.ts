@@ -7,6 +7,7 @@ async function displayUsers() {
 
     getusernamesFromObj.forEach(username => {
         const ele = document.createElement('div');
+        ele.setAttribute("id", "users")
         ele.innerText = `${username[0]}`
         ele.addEventListener('click', () => {
             const userValues: any = Object.values(username)

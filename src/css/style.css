@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
   font-family: "Lato", sans-serif;
   background-color: black;
   color: white;
@@ -16,9 +21,8 @@ body {
 }
 
 #displayUsernames {
-  width: 100px;
-  background-color: rgb(33, 53, 3);
   margin-top: 20px;
+  text-align: center;
 }
 
 #profileInfoContainer {
@@ -36,12 +40,6 @@ body {
   width: 50px;
 }
 
-#users {
-  font-size: 25px;
-  font-weight: 600;
-  color: rgb(126, 142, 87);
-}
-
 #connectionErrorMsg {
   color: red;
   font-weight: bolder;
@@ -49,7 +47,8 @@ body {
 
 #statusUpdatesContainer {
   text-align: center;
-  border: 30px outset orangered;
+  border: 30px outset yellow;
+  padding: 50px;
   border-radius: 0px 40px 0px 40px;
   margin-top: 15px;
 }
@@ -58,8 +57,82 @@ body {
 #displayUsernames,
 #statusUpdatesContainer {
   display: none;
+  text-align: center;
 }
 
 #messagesForUser {
-  color: greenyellow;
+  color: orange;
+}
+
+#title {
+  text-decoration: underline;
+  text-align: center;
+}
+
+#inputPassword {
+  margin-bottom: 10px;
+}
+
+#inputUsername,
+#inputPassword,
+#inputForMessages {
+  background-color: yellow;
+  color: black;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#avatarIMGS {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+#loginBtn,
+#createUserBtn,
+#avatarIMGS,
+#postMessageBtn {
+  background-color: yellow;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  margin: auto;
+}
+
+#deleteAccBtn {
+  background-color: red;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  margin: auto;
+}
+
+#loginBtn:hover,
+#createUserBtn:hover,
+#deleteAccBtn:hover {
+  scale: 1.1;
+  background-color: white;
+  color: black;
+}
+
+#avatarIMGS {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+#users {
+  cursor: pointer;
+  padding: 5px;
+  text-align: center;
+  color: yellow;
+}
+
+#users:hover {
+  color: white;
+}
+
+#usersHeader {
+  font-size: 20px;
+  margin-bottom: -35px;
+  text-decoration: underline;
 }

@@ -9,6 +9,7 @@
     <title>Social Media App</title>
   </head>
   <body>
+    <h1 id="title">Connectify</h1>
     <div id="connectionErrorMsg"></div>
     <form>
       <button id="deleteAccBtn">Delete account</button>
@@ -21,16 +22,16 @@
           name="inputUsername"
           placeholder="Enter username..."
         />
+        <br />
         <input
           type="password"
           id="inputPassword"
           name="inputPassword"
           placeholder="Enter password..."
         />
-        <button id="loginBtn">Log in</button>
-        <button id="createUserBtn">Create User</button>
-
+        <br />
         <label for="avatarIMGS">Select avatar image</label>
+        <br />
         <select name="avatarIMGS" id="avatarIMGS">
           <option
             id="penguinIMG"
@@ -51,6 +52,9 @@
             Bat
           </option>
         </select>
+        <br />
+        <button id="loginBtn">Log in</button>
+        <button id="createUserBtn">Create User</button>
       </div>
       <br />
       <div id="postMessageContainer">
@@ -59,7 +63,11 @@
       </div>
     </form>
     <div id="messagesForUser"></div>
-    <div id="displayUsernames"><span id="users">Users:</span> <br /></div>
+
+    <div id="displayUsernames">
+      <h1 id="usersHeader">Users you can visit:</h1>
+      <p id="users"></p>
+    </div>
     <div id="profileInfoContainer"></div>
     <div id="statusUpdatesContainer"></div>
   </body>
