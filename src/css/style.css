@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: black;
+  color: white;
+}
+
+#postMessageContainer {
+  display: none;
+}
+
+#loggedInAs img {
+  width: 100px;
+}
+
+#displayUsernames {
+  width: 100px;
+  background-color: rgb(33, 53, 3);
+}
+
+#profileInfoContainer {
+  color: rgb(36, 23, 23);
+  border: 2px solid green;
+  width: 500px;
+  background-color: rgb(91, 138, 179);
+}
+
+#profileIMG {
+  width: 50px;
+}
+
+#users {
+  font-size: 25px;
+  font-weight: 600;
+  color: rgb(126, 142, 87);
+}
