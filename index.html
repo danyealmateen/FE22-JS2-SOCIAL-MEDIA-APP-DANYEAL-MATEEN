@@ -9,8 +9,9 @@
     <title>Social Media App</title>
   </head>
   <body>
+    <div id="connectionErrorMsg"></div>
     <form>
-      <button id="deleteAccBtn" disabled="true">Delete account</button>
+      <button id="deleteAccBtn">Delete account</button>
       <div id="loggedInAs"></div>
 
       <div id="createUserDiv">
@@ -54,12 +55,12 @@
       <br />
       <div id="postMessageContainer">
         <input type="text" id="inputForMessages" placeholder="Enter Message" />
-        <button id="postMessageBtn">Post Message</button>
+        <button id="postMessageBtn" disabled="true">Post Message</button>
       </div>
     </form>
     <div id="messagesForUser"></div>
-    <div id="profileInfoContainer"></div>
     <div id="displayUsernames"><span id="users">Users:</span> <br /></div>
+    <div id="profileInfoContainer"></div>
     <div id="statusUpdatesContainer"></div>
   </body>
 </html>

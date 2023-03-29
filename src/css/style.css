@@ -4,6 +4,7 @@ body {
   font-family: "Lato", sans-serif;
   background-color: black;
   color: white;
+  font-weight: bold;
 }
 
 #postMessageContainer {
@@ -17,13 +18,18 @@ body {
 #displayUsernames {
   width: 100px;
   background-color: rgb(33, 53, 3);
+  margin-top: 20px;
 }
 
 #profileInfoContainer {
-  color: rgb(36, 23, 23);
-  border: 2px solid green;
+  color: white;
   width: 500px;
-  background-color: rgb(91, 138, 179);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#profileInfoContainer .test {
+  display: none !important;
 }
 
 #profileIMG {
@@ -34,4 +40,26 @@ body {
   font-size: 25px;
   font-weight: 600;
   color: rgb(126, 142, 87);
+}
+
+#connectionErrorMsg {
+  color: red;
+  font-weight: bolder;
+}
+
+#statusUpdatesContainer {
+  text-align: center;
+  border: 30px outset orangered;
+  border-radius: 0px 40px 0px 40px;
+  margin-top: 15px;
+}
+
+#deleteAccBtn,
+#displayUsernames,
+#statusUpdatesContainer {
+  display: none;
+}
+
+#messagesForUser {
+  color: greenyellow;
 }

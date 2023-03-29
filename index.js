@@ -1,4 +1,16 @@
-import { createNewUser, createUserBtn, postMessageBtn, postMessages, logIn, loginBtn } from "./src/modules/users/users";
+import { createUserBtn, postMessageBtn, loginBtn, deleteAccBtn } from "./src/modules/globals/globals";
+import { createNewUser } from "./src/modules/createNewUser/createNewUser";
+import { getUsers } from "./src/modules/getUsers/getUsers";
+import { postMessages } from "./src/modules/postMessages/postMessages";
+import { displayAllStatusUpdates } from "./src/modules/displayAllStatusUpdates/displayAllStatusUpdates";
+import { logIn } from "./src/modules/logIn/logIn";
+import { deleteUserAccount } from "./src/modules/deleteUserAccount/deleteUserAccount";
+getUsers();
+loginBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    logIn();
+    displayAllStatusUpdates();
+});
 createUserBtn.addEventListener('click', (e) => {
     e.preventDefault();
     createNewUser();
@@ -7,7 +19,8 @@ postMessageBtn.addEventListener('click', (e) => {
     e.preventDefault();
     postMessages();
 });
-loginBtn.addEventListener('click', (e) => {
+deleteAccBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    logIn();
+    deleteUserAccount();
+    window.location.reload();
 });
