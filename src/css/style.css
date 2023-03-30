@@ -1,138 +1,146 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alkatra&family=Noto+Sans+KR&display=swap");
 
 body {
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  align-items: center;
-  font-family: "Lato", sans-serif;
+  min-height: 100vh;
+  font-family: "Cyber", sans-serif;
+  background: linear-gradient(90deg, #f5ed00 70%, #e6de00 70%), #fff700;
+  overflow: hidden;
+}
+
+#header {
+  display: flex;
   background-color: black;
-  color: white;
-  font-weight: bold;
+}
+
+#logo {
+  width: 70px;
+}
+
+#title {
+  margin-left: 10px;
+  color: rgb(25, 224, 250);
+  padding-right: 10px;
 }
 
 #postMessageContainer {
   display: none;
 }
 
-#loggedInAs img {
-  width: 100px;
-}
-
-#displayUsernames {
-  margin-top: 20px;
-  text-align: center;
-}
-
-#profileInfoContainer {
-  color: white;
-  width: 500px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
 #profileInfoContainer .test {
   display: none !important;
-}
-
-#profileIMG {
-  width: 50px;
-}
-
-#connectionErrorMsg {
-  color: red;
-  font-weight: bolder;
-}
-
-#statusUpdatesContainer {
-  text-align: center;
-  border: 30px outset yellow;
-  padding: 50px;
-  border-radius: 0px 40px 0px 40px;
-  margin-top: 15px;
 }
 
 #deleteAccBtn,
 #displayUsernames,
 #statusUpdatesContainer {
   display: none;
+}
+
+#statusUpdatesContainer p {
+  background-color: rgba(3, 212, 212, 0.466);
+  padding: 10px;
+}
+
+#deleteAccBtn {
+  margin-left: 15px;
+}
+
+#inputUsername,
+#inputPassword,
+#avatarIMGS,
+#labelForSelect,
+#inputForMessages {
+  display: block;
   text-align: center;
+  font-family: "Cyber", sans-serif;
+  font-size: 20px;
+  margin: auto;
 }
 
-#messagesForUser {
-  color: orange;
-}
-
-#title {
-  text-decoration: underline;
-  text-align: center;
-}
-
-#inputPassword {
+#avatarIMGS {
+  background-color: black;
+  color: yellow;
+  margin-top: -5px;
   margin-bottom: 10px;
 }
 
 #inputUsername,
 #inputPassword,
 #inputForMessages {
-  background-color: yellow;
-  color: black;
-  font-family: "Lato", sans-serif;
-  font-weight: bold;
-  font-size: 20px;
+  margin-top: 15px;
+  color: rgb(25, 224, 250);
+  background-color: black;
 }
 
-#avatarIMGS {
-  margin-top: 5px;
-  margin-bottom: 10px;
+#inputUsername::placeholder,
+#inputPassword::placeholder,
+#inputForMessages::placeholder {
+  color: yellow;
 }
 
-#loginBtn,
-#createUserBtn,
-#avatarIMGS,
-#postMessageBtn {
-  background-color: yellow;
-  font-family: "Lato", sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-  margin: auto;
+#inputPassword {
+  margin-top: -15px;
 }
 
-#deleteAccBtn {
-  background-color: red;
-  font-family: "Lato", sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-  margin: auto;
+#inputForMessages {
+  margin-bottom: 15px;
 }
 
-#loginBtn:hover,
-#createUserBtn:hover,
-#deleteAccBtn:hover {
-  scale: 1.1;
-  background-color: white;
-  color: black;
+#buttons {
+  margin-top: -30px;
 }
 
-#avatarIMGS {
-  margin-bottom: 10px;
-  margin-top: 10px;
+#loggedInAs {
+  font-size: 30px;
+  text-decoration: underline;
+  margin-top: -45px;
+}
+
+#containerForLoggedIn {
+  margin-top: 15px;
+}
+
+#displayUsernames {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  float: right;
+  margin-right: 15rem;
 }
 
 #users {
+  background-color: black;
+  color: rgb(25, 224, 250);
   cursor: pointer;
-  padding: 5px;
-  text-align: center;
-  color: yellow;
+  margin-top: 10px;
+  padding: 10px;
 }
 
 #users:hover {
   color: white;
+  scale: 1.05;
 }
 
-#usersHeader {
-  font-size: 20px;
-  margin-bottom: -35px;
-  text-decoration: underline;
+#profileIMG {
+  border-radius: 12px;
+  border: 3px solid rgb(25, 224, 250);
+}
+
+#profileInfoContainer {
+  width: 300px;
+}
+
+#containerForLoggedIn {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  float: left;
+  margin-left: 15px;
 }

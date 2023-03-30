@@ -5,70 +5,92 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/css/style.css" />
+    <link rel="stylesheet" href="/src/css/buttons.css" />
+    <link rel="stylesheet" href="/src/css/deletebutton.css" />
     <script type="module" src="index.js"></script>
     <title>Social Media App</title>
   </head>
   <body>
-    <h1 id="title">Connectify</h1>
+    <div id="header">
+      <img src="/src/images/logo.png" id="logo" />
+      <h1 id="title">CYBERCHATTY</h1>
+    </div>
+
+    <div id="banner"></div>
+
     <div id="connectionErrorMsg"></div>
     <form>
-      <button id="deleteAccBtn">Delete account</button>
-      <div id="loggedInAs"></div>
+      <div id="containerForLoggedIn">
+        <button class="cybr-btn del" id="deleteAccBtn">
+          DELETE ACCOUNT<span aria-hidden>_</span>
+          <span aria-hidden class="cybr-btn__glitch">Cyber_</span>
+          <span aria-hidden class="cybr-btn__tag">R25</span>
+        </button>
+        <div id="loggedInAs"></div>
+      </div>
 
       <div id="createUserDiv">
         <input
           type="text"
           id="inputUsername"
           name="inputUsername"
-          placeholder="Enter username..."
+          placeholder="Username"
         />
         <br />
         <input
           type="password"
           id="inputPassword"
           name="inputPassword"
-          placeholder="Enter password..."
+          placeholder="Password"
         />
         <br />
-        <label for="avatarIMGS">Select avatar image</label>
+        <label id="labelForSelect" for="avatarIMGS">Select avatar image</label>
         <br />
         <select name="avatarIMGS" id="avatarIMGS">
-          <option
-            id="penguinIMG"
-            value="https://w7.pngwing.com/pngs/359/541/png-transparent-penguin-books-paperback-publishing-random-house-book-company-king-logo.png"
-          >
-            Penguin
+          <option id="roboIMG" value="https://i.ibb.co/qCNj9Wk/robo.png">
+            Space Robot
           </option>
-          <option
-            id="octopusIMG"
-            value="https://w7.pngwing.com/pngs/45/798/png-transparent-octopus-computer-icons-random-icons-miscellaneous-text-logo.png"
-          >
-            Octopus
+          <option id="zombieIMG" value="https://i.ibb.co/6wKSfjr/zombie.png">
+            Cyber Zombie
           </option>
-          <option
-            id="batIMG"
-            value="https://icon2.cleanpng.com/20180611/uow/kisspng-silhouette-bat-clip-art-vampirina-5b1e11b73e3192.0690200115286972712548.jpg"
-          >
-            Bat
+          <option id="zubzeroIMG" value="https://i.ibb.co/6DFVVX2/zubzero.png">
+            Zub Zero
           </option>
         </select>
         <br />
-        <button id="loginBtn">Log in</button>
-        <button id="createUserBtn">Create User</button>
+        <div id="buttons">
+          <button class="cybr-btn" id="loginBtn">
+            LOG IN<span aria-hidden>_</span>
+            <span aria-hidden class="cybr-btn__glitch">Cyber_</span>
+            <span aria-hidden class="cybr-btn__tag">R25</span>
+          </button>
+
+          <button class="cybr-btn" id="createUserBtn">
+            CREATE USER<span aria-hidden>_</span>
+            <span aria-hidden class="cybr-btn__glitch">Cyber_</span>
+            <span aria-hidden class="cybr-btn__tag">R25</span>
+          </button>
+        </div>
       </div>
       <br />
       <div id="postMessageContainer">
         <input type="text" id="inputForMessages" placeholder="Enter Message" />
-        <button id="postMessageBtn" disabled="true">Post Message</button>
+
+        <button class="cybr-btn" id="postMessageBtn" disabled="true">
+          POST MESSAGE<span aria-hidden>_</span>
+          <span aria-hidden class="cybr-btn__glitch">Cyber_</span>
+          <span aria-hidden class="cybr-btn__tag">R25</span>
+        </button>
       </div>
     </form>
     <div id="messagesForUser"></div>
 
     <div id="displayUsernames">
-      <h1 id="usersHeader">Users you can visit:</h1>
-      <p id="users"></p>
+      <h1 id="usersHeader">Visit users</h1>
+      <div id="profileInfoContainer"></div>
+      <div id="userNameContainer"></div>
     </div>
-    <div id="profileInfoContainer"></div>
+
     <div id="statusUpdatesContainer"></div>
   </body>
 </html>

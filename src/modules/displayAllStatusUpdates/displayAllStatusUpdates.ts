@@ -8,9 +8,12 @@ async function displayAllStatusUpdates() {
 
     for (const username in userData) {
         const statusUpdate = userData[username].statusUpdates;
-        const statusUpdateElement = document.createElement('p');
-        statusUpdateElement.innerText = `${username}: ${statusUpdate}`
-        statusUpdatesContainer?.appendChild(statusUpdateElement)
+
+        if (statusUpdate && statusUpdate.length !== 0) {
+            const statusUpdateElement = document.createElement('p');
+            statusUpdateElement.innerText = `${username}: ${statusUpdate}`
+            statusUpdatesContainer?.appendChild(statusUpdateElement)
+        }
     }
 }
 

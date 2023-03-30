@@ -21,8 +21,11 @@ createUserBtn.addEventListener('click', (e) => {
     createNewUser();
 })
 
+
+
 postMessageBtn.addEventListener('click', (e) => {
     e.preventDefault();
+    console.log("CHECKING POSTMSGBTN")
     postMessages()
 })
 

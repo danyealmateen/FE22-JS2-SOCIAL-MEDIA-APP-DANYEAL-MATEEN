@@ -1,18 +1,24 @@
 import { inputUsername, inputPassword, inputForMessages, avatarIMGS, postedMessagesContainer } from "../globals/globals";
 import { displayAllStatusUpdates } from "../displayAllStatusUpdates/displayAllStatusUpdates";
+import { getUsers } from "../getUsers/getUsers";
+import { displayClickedUser, displayUsers } from "../displayUsers/displayUsers";
 
-let userInfo: object = {
+
+let userInfo = {
     username: inputUsername.value,
     password: inputPassword.value,
     statusUpdates: [inputForMessages.value],
     imageURL: avatarIMGS.value,
 }
 
-console.log(inputForMessages.value)
 
-let currentStatusData: string[] = []
+
+
+let currentStatusData: any[] = [userInfo.statusUpdates]
 
 async function postMessages() {
+
+    console.log("logging from postMessages", userInfo.statusUpdates)
     const inputForMessages = document.getElementById('inputForMessages') as HTMLInputElement;
     const inputUsername = document.getElementById(
         "inputUsername"
@@ -24,7 +30,19 @@ async function postMessages() {
     const url = `https://socialapp-8a221-default-rtdb.europe-west1.firebasedatabase.app/${inputUsername.value}.json`;
 
 
-    currentStatusData.push(inputForMessages.value)
+
+    const users = await getUsers()
+    const currentUser = users[inputUsername.value]
+    let currentStatus: string[];
+
+    if ("statusUpdates" in currentUser) {
+        currentStatus = currentUser.statusUpdates;
+        currentStatus.push(inputForMessages.value)
+    } else {
+        currentStatus = [inputForMessages.value]
+    }
+
+
 
     const init = {
         method: "PUT",
@@ -32,7 +50,7 @@ async function postMessages() {
             (userInfo = {
                 username: inputUsername.value,
                 password: inputPassword.value,
-                statusUpdates: currentStatusData,
+                statusUpdates: currentStatus,
                 imageURL: avatarIMGS.value,
             })
         ),
@@ -42,12 +60,21 @@ async function postMessages() {
     };
     const response = await fetch(url, init);
     const userData = await response.json();
+    console.log(userData)
 
     let postParagraph = document.createElement('p');
     postParagraph.innerText = `${inputUsername.value}${inputForMessages.value}`
     postedMessagesContainer?.append(postParagraph)
 
     displayAllStatusUpdates()
+    displayUsers()
+
+    const selectedUser = document.getElementById('selectedUser') as HTMLElement
+    console.log(selectedUser.textContent, inputUsername.value)
+    if (selectedUser.textContent === userData.username) {
+        displayClickedUser(userData)
+    }
+
 }
 
 export { postMessages }

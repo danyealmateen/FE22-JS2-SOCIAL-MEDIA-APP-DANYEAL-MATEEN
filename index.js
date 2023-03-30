@@ -17,6 +17,7 @@ createUserBtn.addEventListener('click', (e) => {
 });
 postMessageBtn.addEventListener('click', (e) => {
     e.preventDefault();
+    console.log("CHECKING POSTMSGBTN");
     postMessages();
 });
 deleteAccBtn.addEventListener('click', (e) => {

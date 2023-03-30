@@ -1,12 +1,9 @@
-import { deleteAccBtn, inputUsername, inputPassword, postMessageBtn, messagesForUser, createUserDiv, loggedInAs, postMessageContainer, displayUsernames, statusUpdatesContainer } from "../globals/globals";
+import { deleteAccBtn, inputUsername, inputPassword, postMessageBtn, messagesForUser, createUserDiv, loggedInAs, postMessageContainer, displayUsernames, statusUpdatesContainer, avatarIMGS } from "../globals/globals";
 import { displayUsers } from "../displayUsers/displayUsers";
 import { displayAllStatusUpdates } from "../displayAllStatusUpdates/displayAllStatusUpdates";
 import { getStatusUpdate } from "../getStatusUpdate/getStatusUpdate";
 
 async function logIn() {
-
-
-
     const url = `https://socialapp-8a221-default-rtdb.europe-west1.firebasedatabase.app/.json`;
     const response = await fetch(url);
     const userData = await response.json();
@@ -15,7 +12,7 @@ async function logIn() {
         postMessageBtn.disabled = false;
         messagesForUser.innerText = `You've successfully logged in!`
         createUserDiv.style.display = "none";
-        loggedInAs.innerHTML = `You are logged in as: ${inputUsername.value}`
+        loggedInAs.innerHTML = `You are logged in as: ${inputUsername.value} <img id="profileIMG" src="${avatarIMGS.value}"/>`
         postMessageContainer.style.display = "block";
         deleteAccBtn.style.display = "block";
         displayUsernames.style.display = "block";

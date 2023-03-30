@@ -14,7 +14,7 @@ async function createNewUser() {
         body: JSON.stringify((userInfo = {
             username: inputUsername.value,
             password: inputPassword.value,
-            statusUpdates: inputForMessages.value,
+            statusUpdates: [],
             imageURL: avatarIMGS.value,
         })),
         headers: {
@@ -35,5 +35,6 @@ async function createNewUser() {
 }
 postMessageBtn.addEventListener('click', (e) => {
     e.preventDefault();
+    console.log(avatarIMGS.value);
 });
 export { createNewUser };
