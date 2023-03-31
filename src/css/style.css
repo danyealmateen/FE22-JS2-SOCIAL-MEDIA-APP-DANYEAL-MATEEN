@@ -194,7 +194,16 @@ body {
   }
 
   #header {
-    margin-top: 5rem;
+    margin-top: 10rem;
     text-align: center;
+  }
+
+  #deleteAccBtn {
+    margin-bottom: 25px;
+  }
+
+  #loggedInAs {
+    margin-bottom: 20px;
+    font-size: 25px;
   }
 }
