@@ -11,86 +11,98 @@
     <title>Social Media App</title>
   </head>
   <body>
-    <div id="header">
-      <img src="/src/images/logo.png" id="logo" />
-      <h1 id="title">CYBERCHATTY</h1>
-    </div>
-
-    <div id="banner"></div>
-
-    <div id="connectionErrorMsg"></div>
-    <form>
-      <div id="containerForLoggedIn">
-        <button class="cybr-btn del" id="deleteAccBtn">
-          DELETE ACCOUNT<span aria-hidden>_</span>
-          <span aria-hidden class="cybr-btn__glitch">Cyber_</span>
-          <span aria-hidden class="cybr-btn__tag">R25</span>
-        </button>
-        <div id="loggedInAs"></div>
+    <div id="contentContainer">
+      <div id="header">
+        <img src="/src/images/logo.png" id="logo" />
+        <h1 id="title">CYBERCHATTY</h1>
       </div>
 
-      <div id="createUserDiv">
-        <input
-          type="text"
-          id="inputUsername"
-          name="inputUsername"
-          placeholder="Username"
-        />
-        <br />
-        <input
-          type="password"
-          id="inputPassword"
-          name="inputPassword"
-          placeholder="Password"
-        />
-        <br />
-        <label id="labelForSelect" for="avatarIMGS">Select avatar image</label>
-        <br />
-        <select name="avatarIMGS" id="avatarIMGS">
-          <option id="roboIMG" value="https://i.ibb.co/qCNj9Wk/robo.png">
-            Space Robot
-          </option>
-          <option id="zombieIMG" value="https://i.ibb.co/6wKSfjr/zombie.png">
-            Cyber Zombie
-          </option>
-          <option id="zubzeroIMG" value="https://i.ibb.co/6DFVVX2/zubzero.png">
-            Zub Zero
-          </option>
-        </select>
-        <br />
-        <div id="buttons">
-          <button class="cybr-btn" id="loginBtn">
-            LOG IN<span aria-hidden>_</span>
+      <div id="banner"></div>
+
+      <div id="connectionErrorMsg"></div>
+      <form>
+        <div id="containerForLoggedIn">
+          <button class="cybr-btn del" id="deleteAccBtn">
+            DELETE ACCOUNT<span aria-hidden>_</span>
             <span aria-hidden class="cybr-btn__glitch">Cyber_</span>
             <span aria-hidden class="cybr-btn__tag">R25</span>
           </button>
+          <div id="loggedInAs"></div>
+        </div>
 
-          <button class="cybr-btn" id="createUserBtn">
-            CREATE USER<span aria-hidden>_</span>
+        <div id="createUserDiv">
+          <input
+            type="text"
+            id="inputUsername"
+            name="inputUsername"
+            placeholder="Username"
+          />
+          <br />
+          <input
+            type="password"
+            id="inputPassword"
+            name="inputPassword"
+            placeholder="Password"
+          />
+          <br />
+          <label id="labelForSelect" for="avatarIMGS"
+            >Select avatar image</label
+          >
+          <br />
+          <select name="avatarIMGS" id="avatarIMGS">
+            <option id="roboIMG" value="https://i.ibb.co/qCNj9Wk/robo.png">
+              Space Robot
+            </option>
+            <option id="zombieIMG" value="https://i.ibb.co/6wKSfjr/zombie.png">
+              Cyber Zombie
+            </option>
+            <option
+              id="zubzeroIMG"
+              value="https://i.ibb.co/6DFVVX2/zubzero.png"
+            >
+              Zub Zero
+            </option>
+          </select>
+          <br />
+          <div id="buttons">
+            <button class="cybr-btn" id="loginBtn">
+              LOG IN<span aria-hidden>_</span>
+              <span aria-hidden class="cybr-btn__glitch">Cyber_</span>
+              <span aria-hidden class="cybr-btn__tag">R25</span>
+            </button>
+
+            <button class="cybr-btn" id="createUserBtn">
+              CREATE USER<span aria-hidden>_</span>
+              <span aria-hidden class="cybr-btn__glitch">Cyber_</span>
+              <span aria-hidden class="cybr-btn__tag">R25</span>
+            </button>
+          </div>
+        </div>
+        <br />
+        <div id="postMessageContainer">
+          <input
+            type="text"
+            id="inputForMessages"
+            placeholder="Enter Message"
+          />
+
+          <button class="cybr-btn" id="postMessageBtn" disabled="true">
+            POST MESSAGE<span aria-hidden>_</span>
             <span aria-hidden class="cybr-btn__glitch">Cyber_</span>
             <span aria-hidden class="cybr-btn__tag">R25</span>
           </button>
         </div>
-      </div>
-      <br />
-      <div id="postMessageContainer">
-        <input type="text" id="inputForMessages" placeholder="Enter Message" />
+      </form>
+      <div id="messagesForUser"></div>
 
-        <button class="cybr-btn" id="postMessageBtn" disabled="true">
-          POST MESSAGE<span aria-hidden>_</span>
-          <span aria-hidden class="cybr-btn__glitch">Cyber_</span>
-          <span aria-hidden class="cybr-btn__tag">R25</span>
-        </button>
+      <div id="displayUsernames">
+        <!-- <h1 id="usersHeader">Profile Pages</h1> -->
+        <div id="profileInfoContainer"></div>
+        <div id="userNameContainer"></div>
       </div>
-    </form>
-    <div id="messagesForUser"></div>
 
-    <div id="displayUsernames">
-      <h1 id="usersHeader">Visit users</h1>
-      <div id="profileInfoContainer"></div>
-      <div id="userNameContainer"></div>
+      <!-- <h1>Cyber Wall</h1> -->
+      <div id="statusUpdatesContainer"></div>
     </div>
-
-    <div id="statusUpdatesContainer"></div>
   </body>
 </html>

@@ -12,8 +12,6 @@ let userInfo = {
 }
 
 
-
-
 let currentStatusData: any[] = [userInfo.statusUpdates]
 
 async function postMessages() {
@@ -28,8 +26,6 @@ async function postMessages() {
     ) as HTMLInputElement;
 
     const url = `https://socialapp-8a221-default-rtdb.europe-west1.firebasedatabase.app/${inputUsername.value}.json`;
-
-
 
     const users = await getUsers()
     const currentUser = users[inputUsername.value]
@@ -76,5 +72,4 @@ async function postMessages() {
     }
 
 }
-
 export { postMessages }
