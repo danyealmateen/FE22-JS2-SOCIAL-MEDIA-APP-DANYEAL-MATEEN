@@ -9,7 +9,7 @@ body {
   min-height: 100vh;
   font-family: "Cyber", sans-serif;
   background: linear-gradient(90deg, #f5ed00 70%, #e6de00 70%), #fff700;
-  overflow: hidden;
+  overflow: auto;
 }
 
 #header {
@@ -163,6 +163,10 @@ body {
 /* #contentContainer */
 
 @media only screen and (max-width: 900px) {
+  body {
+    overflow: auto;
+  }
+
   #contentContainer,
   #userNameContainer {
     display: flex;
