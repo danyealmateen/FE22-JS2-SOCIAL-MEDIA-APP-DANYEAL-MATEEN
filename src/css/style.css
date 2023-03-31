@@ -9,7 +9,6 @@ body {
   min-height: 100vh;
   font-family: "Cyber", sans-serif;
   background: linear-gradient(90deg, #f5ed00 70%, #e6de00 70%), #fff700;
-  overflow: auto;
 }
 
 #header {
@@ -44,9 +43,12 @@ body {
 #displayUsernames,
 #statusUpdatesContainer {
   display: none;
+  max-width: 300px;
 }
 
 #statusUpdatesContainer p {
+  display: block;
+  max-width: 300px;
   background-color: rgba(3, 212, 212, 0.466);
   padding: 10px;
 }
@@ -163,10 +165,6 @@ body {
 /* #contentContainer */
 
 @media only screen and (max-width: 900px) {
-  body {
-    overflow: auto;
-  }
-
   #contentContainer,
   #userNameContainer {
     display: flex;
@@ -175,7 +173,6 @@ body {
     justify-content: center;
     text-align: center;
     margin: auto;
-    overflow: auto;
   }
   #displayUsernames {
     position: relative;
@@ -185,7 +182,6 @@ body {
     justify-content: center;
     text-align: center;
     margin: auto;
-    overflow: auto;
   }
   #containerForLoggedIn {
     position: relative;
@@ -195,7 +191,6 @@ body {
     justify-content: center;
     text-align: center;
     margin: auto;
-    overflow: auto;
     margin-top: 20px;
     margin-bottom: 20px;
   }
