@@ -52,7 +52,7 @@ body {
 }
 
 #deleteAccBtn {
-  margin-left: 15px;
+  margin: auto;
 }
 
 #inputUsername,
@@ -163,47 +163,36 @@ body {
 /* #contentContainer */
 
 @media only screen and (max-width: 900px) {
-  body {
+  #contentContainer,
+  #userNameContainer {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
-    overflow: auto;
-  }
-
-  #contentContainer {
-    display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  #displayUsernames {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     text-align: center;
     margin: auto;
+    overflow: auto;
   }
-
-  #loginBtn {
-    margin-top: 1rem;
-    margin-bottom: -1rem;
-  }
-
-  #header {
-    margin-top: 10rem;
+  #displayUsernames {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
+    margin: auto;
+    overflow: auto;
   }
-
-  #deleteAccBtn {
-    margin-bottom: 25px;
-  }
-
-  #loggedInAs {
+  #containerForLoggedIn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    overflow: auto;
+    margin-top: 20px;
     margin-bottom: 20px;
-    font-size: 25px;
   }
 }
